@@ -1,0 +1,2 @@
+import wikipedia
+print(wikipedia.WikipediaPage(input()).content)
