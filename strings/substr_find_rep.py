@@ -1,3 +1,7 @@
+# Author: Pranav Shridhar
+# Python 3
+# Replaces a substring with a different string.  India - > (ia) replace with (onasia) -> Indonasia 
+
 def myFind(str, substr, repstr):
     for i in range(len(str)):
         if str[i:i+len(substr)] == substr:
