@@ -1,4 +1,5 @@
-/* C++ Program - Temperature Conversion*/
+/* Author: Aiswarya Jayachandran
+   C++ Program - Temperature Converter between Fahrenheit and Celsius*/
 
 
 #include<iostream.h>
