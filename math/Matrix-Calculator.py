@@ -1,6 +1,4 @@
-#Name: S Sandeep Pillai
-#College: Model Engineering College (CS-1 A)
-#Number: 9562294830
+#Author: S Sandeep Pillai
 #PYTHON 3
 ### Program to do Matrix Algebera - Add - Subtract - Multiply
 
