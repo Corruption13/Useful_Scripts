@@ -1,4 +1,4 @@
-/* Author: Aiswarya Jayachandran
+/* Author: Aiswarya Jayachandran (https://github.com/Aishh2k)
    C++ Program - Temperature Converter between Fahrenheit and Celsius*/
 
 
