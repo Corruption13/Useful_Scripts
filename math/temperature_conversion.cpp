@@ -1,5 +1,7 @@
-/* Author: Aiswarya Jayachandran (https://github.com/Aishh2k)
-   C++ Program - Temperature Converter between Fahrenheit and Celsius*/
+/* 
+Author: Aiswarya Jayachandran (https://github.com/Aishh2k)
+C++ Program - Temperature Converter between Fahrenheit and Celsius
+*/
 
 
 #include<iostream.h>
@@ -14,6 +16,7 @@ void main()
 	cout<<endl<<"2.Celsius to Fahrenheit"
 	cout<<endl<<"Enter choice: "
 	cin>>choice;
+	
               if (choice==1)
 	         {
 			cout<<"Enter temperature in Fahrenheit : ";
