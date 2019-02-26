@@ -1,4 +1,4 @@
-# Script to check FOSSMEET website status
+# Script to check FOSSMEET website status (Don't ask why)
 import requests
 from bs4 import BeautifulSoup
 import time
