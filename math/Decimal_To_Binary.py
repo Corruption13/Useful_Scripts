@@ -1,37 +1,45 @@
-#PYTHON 3
-#Decimal to Binary converter.
-
-#This is an *EXTENSIVE* program that allows upto 7 fraction-decimal places! Can be changed to ANY value(recommended 2):
-decimal_accuracy = 7
+# Decimal to Binary converter.
 
 
-def dtbconverter(num):      # Function inputs a float value and returns a list as output
-                            # Reasoning for list instead of integer: to avoid integer overflow error.
+def dtbconverter(num):
+    """ Function inputs a float value and returns a list as output """
+    decimal_accuracy = 7
 
-    whole= []                                   # The part before decimal point
-    fractional = ['.']                          # The part after decimal point
+    # The part before decimal point in List<string> format
+    whole = []
+    # The part after decimal point in List<string> format
+    fractional = ['.']
 
-    decimal = round(num%1, decimal_accuracy)    # Extract fractional number part of decimal
-    w_num = int(num)                            # Extract whole number part of decimal.
+    # Extract fractional number part of decimal
+    mantissa = round(num % 1, decimal_accuracy)
+    # Extract whole number part of decimal.
+    w_num = int(num)
 
-    i=0     # Some fractional decimal numbers have infinite binary values, so we limit this loop below.
+    i = 0     # Counter
 
-    #Loop to find binary of decimal part
-    while(decimal!=1 and i<decimal_accuracy):
-            decimal = decimal*2
-            fractional.append(int(decimal//1))
-            decimal = round(decimal%1, decimal_accuracy)
-            if(decimal == 0): break # Removes trailing zeros.
-            i = i + 1
-    #Loop to find binary of whole number part.
-    while(w_num!=0):
-        whole.append(w_num%2)
-        w_num = w_num//2
+    # Loop to find binary of mantissa part
+    while i < decimal_accuracy:
+        mantissa = mantissa * 2
+        mantissa = int(mantissa // 1)
+        fractional.append(str(mantissa))
+        # Extacting mantissa
+        mantissa = round(mantissa % 1, decimal_accuracy)
+        if mantissa == 0:
+            break  # Removes trailing zeros.
+        i = i + 1
+
+    # Loop to find binary of whole number part.
+    while w_num != 0:
+        whole.append(w_num % 2)
+        w_num = w_num // 2
     whole.reverse()
 
-    return whole + fractional  ### End of dtbconverter() - 16 lines
+    binary = whole + fractional
+    return "".join(binary)
 
 
-#Test lines.
-number = float(input("Enter ANY base-10 Number: "))
-print("The Binary Equivalant: " , *dtbconverter(number))
+if __name__ == '__main__':
+    # NUMBER = float(input("Enter ANY base-10 Number: "))
+    NUMBER = 55.55
+    print("The Binary Equivalant: " + dtbconverter(NUMBER))
+
