@@ -1,7 +1,7 @@
 # Decimal to Binary converter.
 
 
-def dtbconverter(num):
+def dtbconverter(num, decimal_accuracy = 7):
     """ Function inputs a float value and returns a list as output """
     decimal_accuracy = 7
 
@@ -37,9 +37,17 @@ def dtbconverter(num):
     binary = whole + fractional
     return "".join(binary)
 
+def main():
+    print("Call the function as dtbconverter(Number [, Decimal Accuracy (7) ] ) \n")
+    print(print("The Binary Equivalant of 1: " + dtbconverter(1))
+    print(print("The Binary Equivalant of 2: " + dtbconverter(2))
+    print(print("The Binary Equivalant of 10: " + dtbconverter(10))
+    print(print("The Binary Equivalant of 55: " + dtbconverter(55))
+    print(print("The Binary Equivalant of 55.55: " + dtbconverter(55.55))
+    print(print("The Binary Equivalant of 0.3: " + dtbconverter(0.3))
+    print(print("The Binary Equivalant of 9876.4321: " + dtbconverter(9876.4321))
+         
 
 if __name__ == '__main__':
-    # NUMBER = float(input("Enter ANY base-10 Number: "))
-    NUMBER = 55.55
-    print("The Binary Equivalant: " + dtbconverter(NUMBER))
+    main()
 
